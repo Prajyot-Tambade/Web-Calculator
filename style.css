@@ -1,0 +1,227 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --body-bg-: #666;
+    --primary-bg: hsl(100, 6%, 10%);
+    --secondary-bg: hsl(138, 10%, 19%);
+
+    --key-bg: hsl(132, 7%, 14%);
+    --op-key-bg: hsl(140, 11%, 26%);
+    --op-key-eq-bg: hsl(145, 42%, 22%);
+    --op-key-clr-bg: hsl(200, 32%, 26%);
+
+    --text-color: hsl(84, 8%, 88%);
+    --text-color-ans: hsl(84, 8%, 75%);
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(0, 0%, 0%);
+}
+
+.calculator {
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
+    width: 100%;
+    background-color: var(--primary-bg);
+    color: var(--text-color);
+}
+
+.display {
+    flex: 30%;
+
+    position: relative;
+    /* height: 30%;
+    width: 100%; */
+    background-color: var(--secondary-bg);
+    border-radius: 0 0 1.25rem 1.25rem;
+    padding: 1rem;
+}
+
+.head {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.heading {
+    width: 100%;
+    font-size: 1rem;
+}
+
+.head a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.input {
+    width: 100%;
+    margin-top: 1rem;
+    font-size: 5rem;
+    text-align: right;
+    background-color: transparent;
+    color: inherit;
+    outline: none;
+    border: none;
+}
+
+.answer {
+    width: 100%;
+    height: min-content;
+    font-size: 4.2rem;
+    text-align: right;
+    color: var(--text-color-ans);
+    background-color: transparent;
+    pointer-events: none;
+    outline: none;
+    border: none;
+}
+
+.display::after {
+    content: "";
+    width: 1.4rem;
+    height: 0.2rem;
+    position: absolute;
+    bottom: 0.3rem;
+    left: 50%;
+    margin-left: -0.7rem;
+    background-color: var(--text-color);
+    border-radius: 5px;
+}
+
+.keypad {
+    flex: 70%;
+
+    /* width: 100%;
+    max-height: 70%; */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+    place-items: center;
+    padding: 1rem;
+}
+
+.item {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.key,
+.op-key,
+.clr-key,
+.eq-key {
+    width: 100%;
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--key-bg);
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.op-key,
+.clr-key,
+.eq-key {
+    font-size: 1.8rem;
+}
+
+.op-key {
+    background-color: var(--op-key-bg);
+}
+
+.clr-key {
+    background-color: var(--op-key-clr-bg);
+}
+
+.eq-key {
+    background-color: var(--op-key-eq-bg);
+}
+
+@media (min-width: 30em) {
+    :root {
+        --primary-bg: hsl(252, 9%, 11%);
+        --secondary-bg: hsl(228, 14%, 22%);
+
+        --key-bg: hsl(234, 13%, 15%);
+        --op-key-bg: hsl(225, 16%, 30%);
+        --op-key-eq-bg: hsl(227, 44%, 35%);
+        --op-key-clr-bg: hsl(305, 26%, 30%);
+    }
+
+    .calculator {
+        width: 50%;
+        height: 80%;
+        border-radius: 1.25rem;
+        padding: 2rem;
+    }
+    .display {
+        width: 100%;
+        height: auto;
+        border-radius: 1.25rem;
+        padding: 1.25rem;
+        margin: 0;
+    }
+    .input {
+        margin: 0;
+    }
+    .keypad {
+        margin: 0;
+        /* height: 70%; */
+        max-height: 65%;
+    }
+    .key,
+    .op-key,
+    .clr-key,
+    .eq-key {
+        aspect-ratio: revert;
+        width: 100%;
+        height: 100%;
+        border-radius: 3rem;
+    }
+}
+
+@media (min-height: 60em) {
+    .calculator {
+        width: 70%;
+    }
+    .display::after {
+        width: 3.5rem;
+        height: 0.4rem;
+        bottom: 0.5rem;
+    }
+    .head,
+    .heading {
+        font-size: 2rem;
+    }
+    .input {
+        margin-top: 2rem;
+        font-size: 6rem;
+    }
+    .answer {
+        margin-top: 1rem;
+        font-size: 4.2rem;
+    }
+    .keypad {
+        padding-top: 2rem;
+        gap: 1rem;
+    }
+}

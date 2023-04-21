@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="calculator" id="cal">
+
+        <div class="display">
+            <div class="head">
+                
+                <h1 class="heading">Calculator</h1>
+                <a href="https://github.com/Prajyot-Tambade" target="_blank"><i class="fa-brands fa-github"></i></a>
+
+            </div>
+
+            <input type="text" inputmode="none" class="input" id="operations">
+
+            <!-- <div class="answer"></div> -->
+            <input type="number" class="answer" id="ans">
+
+        </div>
+
+        <div class="keypad">
+
+            <div class="item" onclick="allClr()"><div class="clr-key">AC</div></div> 
+            <div class="item" onclick="clr()"><div class="op-key">C</div></div> 
+            <div class="item" onclick="dis('%')"><div class="op-key"><i class="fa-solid fa-percent"></i></div></div> 
+            <div class="item" onclick="dis('/')"><div class="op-key">/</div></div> 
+            <div class="item" onclick="dis('7')"><div class="key">7</div></div> 
+            <div class="item" onclick="dis('8')"><div class="key">8</div></div> 
+            <div class="item" onclick="dis('9')"><div class="key">9</div></div> 
+            <div class="item" onclick="dis('*')"><div class="op-key"><i class="fa-solid fa-asterisk"></i></div></div> 
+            <div class="item" onclick="dis('4')"><div class="key">4</div></div> 
+            <div class="item" onclick="dis('5')"><div class="key">5</div></div> 
+            <div class="item" onclick="dis('6')"><div class="key">6</div></div> 
+            <div class="item" onclick="dis('-')"><div class="op-key"><i class="fa-solid fa-minus"></i></div></div> 
+            <div class="item" onclick="dis('1')"><div class="key">1</div></div> 
+            <div class="item" onclick="dis('2')"><div class="key">2</div></div> 
+            <div class="item" onclick="dis('3')"><div class="key">3</div></div> 
+            <div class="item" onclick="dis('+')"><div class="op-key"><i class="fa-solid fa-plus"></i></div></div> 
+            <div class="item" onclick="dis('0')"><div class="key">0</div></div> 
+            <div class="item" onclick="dis('.')"><div class="key">.</div></div> 
+            <div class="item" onclick="del()" id="delete"><div class="key delete-key"><i class="fa-solid fa-delete-left"></i></div></div> 
+            <div class="item" onclick="solve()" id="enter"><div class="eq-key"><i class="fa-solid fa-equals"></i></div></div> 
+
+        </div>
+
+    </div>
+
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/e9d25362d7.js" crossorigin="anonymous"></script>
+
+    <!-- Original Script  -->
+    <script src="script.js"></script>
+
+</body>
+</html>
